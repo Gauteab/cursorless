@@ -205,7 +205,7 @@ export interface HeadTailModifier {
 /**
  * Runs {@link modifier} if the target is lacking an explicit scope type.
  */
-export interface ModifyIfImplicitScopeTypeModifier {
+export interface ModifyIfUntypedModifier {
   type: "modifyIfUntyped";
 
   /**
@@ -239,7 +239,7 @@ export type Modifier =
   | LeadingModifier
   | TrailingModifier
   | RawSelectionModifier
-  | ModifyIfImplicitScopeTypeModifier
+  | ModifyIfUntypedModifier
   | CascadingModifier;
 
 export interface PartialRangeTargetDescriptor {
